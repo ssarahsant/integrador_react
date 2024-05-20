@@ -1,0 +1,27 @@
+/* Estilização padrão da página inical*/
+
+/* criação de variáveis globais, abrindo uma sessão de root,
+para reaproveitar a estilização posteriormente*/
+/* desse modo toda vez que for utiliza a cor definida */
+:root {
+    --cinza-escuro: #e0e0e2;
+    --cinza-claro: #cccccc;
+    --roxo-escuro: #1e2749;
+    --roxo-claro: #8ecae6;
+    --branco: #ffffff;
+}
+
+/* Zerando a pré-formatação do navegador*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; 
+    /* o rem é o tipo de medida padrão para fontes de escrita */
+}
+
+/* Componente que cham a cor atribuida na variavel */ 
+body {
+    background-color: var(--roxo-escuro);
+}
