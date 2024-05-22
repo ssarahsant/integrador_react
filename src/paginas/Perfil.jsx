@@ -54,9 +54,9 @@ export function Perfil() {
     // Renderizando o formulário
     return (
         <div className={estilos.container}>
-            <p className={estilos.titulo}>Cadastro de Sensores</p>
-
             <form className={estilos.formulario} onSubmit={handleSubmit(obterDadosFormulario)}>
+            <p className={estilos.titulo}>Cadastro de Sensores</p>
+            
                 {errors.tipo && (
                     <p className={estilos.mensagem}>{errors.tipo.message}</p>
                 )}
@@ -64,7 +64,7 @@ export function Perfil() {
                     {...register('tipo')}
                     className={estilos.campo}
                 >
-                    <option value="">Selecione o Tipo</option>
+                    <option value="">Selecione o Tipo de Sensor</option>
                     {TIPOS_SENSOR_CHOICES.map(choice => (
                         <option key={choice.value} value={choice.value}>
                             {choice.label}
@@ -88,8 +88,6 @@ export function Perfil() {
                     {...register('latitude')}
                     className={estilos.campo}
                     placeholder="Latitude"
-                    type="number"
-                    step="any"
                 />
 
                 {errors.longitude && (
@@ -99,8 +97,6 @@ export function Perfil() {
                     {...register('longitude')}
                     className={estilos.campo}
                     placeholder="Longitude"
-                    type="number"
-                    step="any"
                 />
 
                 {errors.localizacao && (

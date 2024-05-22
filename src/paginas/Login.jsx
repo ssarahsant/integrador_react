@@ -15,9 +15,9 @@ export function Login() {
  
     return (
         <div className={estilos.wrapper}>
-            <p className={estilos.titulo}>AUTENTIFICAÇÃO</p>
             <div className={estilos.conteiner}>
                 <form className={estilos.formulario} onSubmit={obterDadosFormulario}>
+                <p className={estilos.titulo}>LOGIN</p>
                     <input
                         className={estilos.campo}
                         placeholder="Usuario"

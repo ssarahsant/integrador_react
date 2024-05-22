@@ -1,0 +1,52 @@
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-escuro);
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Definindo a largura do formulário */
+    max-width: 380px; /* Definindo a largura máxima do formulário */
+    margin: 0 auto; /* Centralizando o formulário na página */
+}
+ 
+.campo{
+    margin-bottom: 15px; /* Aumentando o espaçamento entre os campos */
+    padding: 12px; /* Aumentando o preenchimento dos campos */
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 6px;
+    background-color: var(--cinza-claro);
+}
+ 
+.botao{
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 8px;
+    transition: color .5s background-color .5s;
+}
+.botao:hover{
+    background-color: var(--roxo-claro);
+    color: var(--branco);
+}
+
+.mensagem {
+    color: red;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.titulo {
+    color: var(--roxo-escuro);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}

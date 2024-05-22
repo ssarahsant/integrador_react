@@ -30,7 +30,6 @@
     padding: 8px;
     border-radius: 2px solid var(--roxo-escuro);
     border-radius: 8px;
-
     transition: color .5s background-color .5s;
 }
  

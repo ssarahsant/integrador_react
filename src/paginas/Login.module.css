@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p3/26378511-abstrato-futurista-localizacao-ponto-gps-pin-para-digital-mapa-conceito-em-sombrio-azul-fundo-ilustracao-vetor.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('C:\Users\ct67ca\Desktop\integrador_react\testandor.png'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
 }
@@ -39,9 +39,9 @@
  
 .titulo {
     text-align: center;
-    color: #fff;
+    color: #000000;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
 }
