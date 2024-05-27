@@ -1,9 +1,5 @@
 // impotação dos componentes que irá estruturar a pagina
-import { Inicial } from './paginas/Inicial'
 import './global.css'
-import { List } from '@phosphor-icons/react/dist/ssr'
-import { Lista } from './paginas/Lista'
-import { Perfil } from './paginas/Perfil'
 import { BrowserRouter } from 'react-router-dom'
 import { Rotas } from './rotas/Rotas'
 

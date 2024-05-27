@@ -57,6 +57,7 @@ export function Cadastro(){
             >
                  <p className={estilos.titulo}>Cadastro de Usuários</p>
                  
+                <label>Nome</label>
                 {errors.nome && (
                     <p className={estilos.mensagem}
                     >{errors.nome.message}</p>
@@ -64,9 +65,9 @@ export function Cadastro(){
                 <input 
                 {...register('nome')}
                 className={estilos.campo}
-                placeholder="Nome"
                 />
 
+                <label>Usuario</label>
                 {errors.usuario && (
                     <p className={estilos.mensagem}
                     >{errors.usuario.message}</p>
@@ -75,9 +76,9 @@ export function Cadastro(){
                 <input 
                 {...register('usuario')}
                 className={estilos.campo}
-                placeholder="Usuario"
                 />
                 
+                <label>Senha</label>
                 {errors.senha && (
                     <p className={estilos.mensagem}
                     >{errors.senha.message}</p>
@@ -85,7 +86,6 @@ export function Cadastro(){
                 <input 
                 {...register('senha')}
                 className={estilos.campo}
-                placeholder="Senha"
                 />
                 
                 <button

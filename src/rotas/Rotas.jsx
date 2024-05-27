@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 // utilizando os routes para envpolver as rotas unicamente.
 import { Login } from '../paginas/Login'
 import { Inicial } from '../paginas/Inicial'
-import { Perfil } from '../paginas/Perfil'
+import { CadastroSensores } from '../paginas/CadastroSensores'
 import { Lista } from '../paginas/Lista'
 import { Cadastro } from '../paginas/Cadastro'
 
@@ -19,7 +19,7 @@ export function Rotas() {
             <Route path='/' element={<Login/>}/>
             <Route path='/inicial' element={<Inicial/>}>
                 <Route index element={<Lista/>}/>
-                <Route path='perfil' element={<Perfil/>}/>
+                <Route path='cadastrosensores' element={<CadastroSensores/>}/>
                 <Route path='cadastro' element={<Cadastro/>}/>
             </Route>
             

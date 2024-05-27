@@ -17,17 +17,17 @@ export function Login() {
         <div className={estilos.wrapper}>
             <div className={estilos.conteiner}>
                 <form className={estilos.formulario} onSubmit={obterDadosFormulario}>
-                <p className={estilos.titulo}>LOGIN</p>
+                <p className={estilos.titulo}>Login</p>
+                    <label>Usuário</label>
                     <input
                         className={estilos.campo}
-                        placeholder="Usuario"
                         value={usuario}
                         onChange={e => setUsuario(e.target.value)}
                     />
+                    <label>Senha</label>
                     <input
                         type="password"
                         className={estilos.campo}
-                        placeholder="Senha"
                         value={senha}
                         onChange={e => setSenha(e.target.value)}
                     />

@@ -26,7 +26,7 @@ export function Lateral () {
 
                 <Link
                 className={estilos.botao}
-                to='perfil'>
+                to='cadastrosensores'>
                     Cadastro de Sensores
                 </Link>
 

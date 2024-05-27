@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('C:\Users\ct67ca\Desktop\integrador_react\testandor.png'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('C:\Users\ct67ca\Desktop\integrador_react - Copia\src\assets\fundo_login.png'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
 }
@@ -15,28 +15,6 @@
     align-items: center;
 }
  
-.formulario {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
-    padding: 30px;
-    border-radius: 10px;
-}
- 
-.campo {
-    margin-bottom: 10px;
-    padding: 5px;
-    border-radius: 6px;
-}
- 
-.botao {
-    background-color: var(--roxo-escuro);
-    color: var(--cinza-claro);
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-}
- 
 .titulo {
     text-align: center;
     color: #000000;
@@ -45,3 +23,29 @@
     margin-bottom: 20px;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
 }
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+}
+ 
+.campo {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    width: 250px;
+}
+ 
+.botao {
+    background-color: var(--roxo-escuro);
+    color: var(--cinza-claro);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+ 

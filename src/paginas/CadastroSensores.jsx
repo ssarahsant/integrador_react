@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 // intermediação do hook com o zod
 import { zodResolver } from '@hookform/resolvers/zod'
-import estilos from './Perfil.module.css'
+import estilos from './CadastroSensores.module.css'
 
 // Definindo as opções de tipo de sensor
 const TIPOS_SENSOR_CHOICES = [
@@ -14,7 +14,7 @@ const TIPOS_SENSOR_CHOICES = [
 ];
 
 // Definindo as regras de validação
-const schemaPerfil = z.object({
+const schemaSensor = z.object({
     tipo: z.enum(TIPOS_SENSOR_CHOICES.map(choice => choice.value), {
         errorMap: () => ({ message: 'Selecione um tipo válido' })
     }),
@@ -40,10 +40,10 @@ const schemaPerfil = z.object({
         .optional()
 });
 
-export function Perfil() {
+export function CadastroSensores() {
     // Inicializando o useForm com o resolver do Zod
     const { register, handleSubmit, formState: { errors } } = useForm({
-        resolver: zodResolver(schemaPerfil)
+        resolver: zodResolver(schemaSensor)
     });
 
     // Função para obter os dados do formulário
@@ -72,6 +72,7 @@ export function Perfil() {
                     ))}
                 </select>
 
+                <label>Mac Address</label>
                 {errors.mac_address && (
                     <p className={estilos.mensagem}>{errors.mac_address.message}</p>
                 )}
@@ -81,49 +82,49 @@ export function Perfil() {
                     placeholder="MAC Address"
                 />
 
+                <label>Latitude</label>
                 {errors.latitude && (
                     <p className={estilos.mensagem}>{errors.latitude.message}</p>
                 )}
                 <input
                     {...register('latitude')}
                     className={estilos.campo}
-                    placeholder="Latitude"
                 />
-
+                
+                <label>Longitude</label>
                 {errors.longitude && (
                     <p className={estilos.mensagem}>{errors.longitude.message}</p>
                 )}
                 <input
                     {...register('longitude')}
                     className={estilos.campo}
-                    placeholder="Longitude"
                 />
 
+                <label>Localização</label>
                 {errors.localizacao && (
                     <p className={estilos.mensagem}>{errors.localizacao.message}</p>
                 )}
                 <input
                     {...register('localizacao')}
                     className={estilos.campo}
-                    placeholder="Localização"
                 />
-
+                
+                <label>Responsável</label>
                 {errors.responsavel && (
                     <p className={estilos.mensagem}>{errors.responsavel.message}</p>
                 )}
                 <input
                     {...register('responsavel')}
                     className={estilos.campo}
-                    placeholder="Responsável"
                 />
 
+                <label>Unidade de Medida</label>
                 {errors.unidade_medida && (
                     <p className={estilos.mensagem}>{errors.unidade_medida.message}</p>
                 )}
                 <input
                     {...register('unidade_medida')}
                     className={estilos.campo}
-                    placeholder="Unidade de Medida"
                 />
 
                 <div className={estilos.campoCheckbox}>

@@ -6,6 +6,7 @@
     align-items: center;
     background-color: var(--cinza-escuro);
 }
+
 .formulario{
     display: flex;
     flex-direction: column;
@@ -18,6 +19,13 @@
     margin: 0 auto; /* Centralizando o formulário na página */
 }
  
+.titulo {
+    color: var(--roxo-escuro);
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
 .campo{
     margin-bottom: 15px; /* Aumentando o espaçamento entre os campos */
     padding: 12px; /* Aumentando o preenchimento dos campos */
@@ -32,7 +40,9 @@
     padding: 10px;
     border-radius: 8px;
     transition: color .5s background-color .5s;
+    margin-top: 10px; 
 }
+
 .botao:hover{
     background-color: var(--roxo-claro);
     color: var(--branco);
@@ -42,11 +52,4 @@
     color: red;
     font-weight: 600;
     margin-bottom: .5rem;
-}
-
-.titulo {
-    color: var(--roxo-escuro);
-    font-size: 2rem;
-    margin-bottom: 25px;
-    text-align: center;
 }

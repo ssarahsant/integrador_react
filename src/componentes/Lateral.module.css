@@ -2,6 +2,9 @@
     background-color: #fff;
     padding: 20px; /* Adicionando um espaçamento interno */
     border-right: 1px solid var(--cinza-claro); /* Adicionando uma borda à direita */
+    /* background-image: url('C:\Users\ct67ca\Desktop\integrador_react - Copia\src\assets\download (2).jfif');
+    background-size: cover;
+    background-position: center;*/
 }
 
 .header {
