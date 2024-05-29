@@ -1,10 +1,11 @@
 import React from "react";
 import axios from 'axios';
-import estilos from './Login.module.css'
-import { useForm } from 'react-hook-form'
+import estilos from './Login.module.css'; // Importe o arquivo CSS aqui
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 
 // abrir um schema para fazer validação através do zod
 const schemaLogin = z.object ({
@@ -57,25 +58,25 @@ export function Login() {
             <div className={estilos.wrapper}>
                 <div className={estilos.conteiner}>
                     <form 
+                    className={estilos.formulario}
                     onSubmit={handleSubmit(obterDadosFormulario)}
                     >
-                        <p>Login</p>
+                        <p className={estilos.titulo}>Login</p>
 
+                        <label>Usuário</label>
                         <input
                             className={estilos.campo}
                             {...register('usuario')}
-                            placeholder = "Usuário"
                         />
                         {errors.usuario && (
                             <p>{errors.usuario.message}</p>
                         )}
                         
-
+                        <label>Senha</label>
                         <input 
                             className={estilos.campo}
                             {...register('senha')}
                             type="password"
-                            placeholder="Senha"
                         />
                         {errors.senha && (
                             <p>{errors.senha.message}</p>
