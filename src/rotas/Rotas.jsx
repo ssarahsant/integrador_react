@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Login } from '../paginas/Login'
 import { Inicial } from '../paginas/Inicial'
 import { CadastroSensores } from '../paginas/CadastroSensores'
-import { Lista } from '../paginas/Lista'
+import { Sensor } from '../paginas/Sensor'
 import { Cadastro } from '../paginas/Cadastro'
 
 //para criar a rota usa-se a barra (/) para separra cada caminho e o servidor
@@ -18,7 +18,7 @@ export function Rotas() {
         <Routes>
             <Route path='/' element={<Login/>}/>
             <Route path='/inicial' element={<Inicial/>}>
-                <Route index element={<Lista/>}/>
+                <Route index element={<Sensor/>}/>
                 <Route path='cadastrosensores' element={<CadastroSensores/>}/>
                 <Route path='cadastro' element={<Cadastro/>}/>
             </Route>

@@ -1,39 +1,90 @@
-import React, { useState } from 'react';
-import estilos from './Login.module.css';
-import { useNavigate } from 'react-router-dom';
- 
+import React from "react";
+import axios from 'axios';
+import estilos from './Login.module.css'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useNavigate } from 'react-router-dom'
+
+// abrir um schema para fazer validação através do zod
+const schemaLogin = z.object ({
+    usuario:z.string()
+        .min(5, "O minimo são 5 caracteres")
+        .max(20, "O máximo são 20 caracteres"),
+    
+    senha:z.string()
+        .min(6, "Informe 6 caracteres")
+        .max(20, "O máximo são 20 caracteres")
+});
+
+// Exportar a função para ser usada externamente
 export function Login() {
-    const [usuario, setUsuario] = useState('');
-    const [senha, setSenha] = useState('');
- 
+    // O navigate será usado para direcionar o usuário para a página home, após o login
     const navigate = useNavigate();
- 
-    function obterDadosFormulario(e) {
-        e.preventDefault();
-        navigate('inicial');
+
+    const {register, handleSubmit, formState: {errors}} = useForm ({
+        resolver: zodResolver(schemaLogin)
+    });
+
+    // criação da função para validação de login + consumo da API para verificação no back-end
+    // criação de uma função assincrona (faz uma requisição externa sem depender do tempo de espera para o retorno)
+
+    async function obterDadosFormulario(data) {
+        try {
+            const response = await axios.post('http://127.0.0.1:8000/api/token/', {
+                // passagem do username e password para recuperar o token
+                // captura o que está sendo capturado no formulário do usuário e enviar através de uma requisição http
+                username: data.usuario,
+                password: data.senha
+            });
+            // captura o acces e token e armazena fornecidos pela API, no local storege, para permitir 
+            // o acesso na página após verificação no banco
+            const {access, refresh} = response.data;
+            localStorage.setItem('acess_token', access);
+            localStorage.setItem('refresh_token', refresh);
+
+            console.log("Login bem sucedido");
+            navigate('/inicial')
+        }
+        catch(errors){
+            console.log("Erro na autenticação", errors);
+        }
     }
- 
-    return (
-        <div className={estilos.wrapper}>
-            <div className={estilos.conteiner}>
-                <form className={estilos.formulario} onSubmit={obterDadosFormulario}>
-                <p className={estilos.titulo}>Login</p>
-                    <label>Usuário</label>
-                    <input
-                        className={estilos.campo}
-                        value={usuario}
-                        onChange={e => setUsuario(e.target.value)}
-                    />
-                    <label>Senha</label>
-                    <input
-                        type="password"
-                        className={estilos.campo}
-                        value={senha}
-                        onChange={e => setSenha(e.target.value)}
-                    />
-                    <button className={estilos.botao}>Entrar</button>
-                </form>
+
+        // construção do return com a visualização para o usuário (estrutura html)
+        // no momento de criação do input, será criada a estrutura de validação do zod
+        return(
+            <div className={estilos.wrapper}>
+                <div className={estilos.conteiner}>
+                    <form 
+                    onSubmit={handleSubmit(obterDadosFormulario)}
+                    >
+                        <p>Login</p>
+
+                        <input
+                            className={estilos.campo}
+                            {...register('usuario')}
+                            placeholder = "Usuário"
+                        />
+                        {errors.usuario && (
+                            <p>{errors.usuario.message}</p>
+                        )}
+                        
+
+                        <input 
+                            className={estilos.campo}
+                            {...register('senha')}
+                            type="password"
+                            placeholder="Senha"
+                        />
+                        {errors.senha && (
+                            <p>{errors.senha.message}</p>
+                        )}
+
+                        <button  className={estilos.botao}>Entrar</button>
+
+                    </form>
+                </div>
             </div>
-        </div>
-    );
+        )
 }
