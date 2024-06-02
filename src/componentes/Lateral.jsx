@@ -1,42 +1,33 @@
-import estilos from './Lateral.module.css'
-// importaçaõ do componente link da biblioteca router
-import { Link } from 'react-router-dom'
+import estilos from './Lateral.module.css';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.jpg'; 
 
-
-// Importação do Icone
-import { NavigationArrow } from '@phosphor-icons/react'
-
-export function Lateral () {
+export function Lateral() {
     return (
         <aside className={estilos.conteiner}>
             <header className={estilos.header}>
-            <NavigationArrow 
-            size={32} 
-            weight="fill" 
-            color='#1e2749' />
-                <p className={estilos.title}>LOCALIZADOR</p>
+                <img src={logo} alt="Logo" className={estilos.logo} /> 
             </header>
             
             <section>
-            <Link
-                className={estilos.botao}
-                to='/inicial'>
+                <Link
+                    className={estilos.botao}
+                    to='/inicial'>
                     Sensores
                 </Link>
 
                 <Link
-                className={estilos.botao}
-                to='cadastrosensores'>
+                    className={estilos.botao}
+                    to='cadastrosensores'>
                     Cadastro de Sensores
                 </Link>
 
                 <Link
-                className={estilos.botao}
-                to='cadastro'>
+                    className={estilos.botao}
+                    to='cadastro'>
                     Cadastro de Usuário
                 </Link>
             </section>
-            
         </aside>
     )
 }

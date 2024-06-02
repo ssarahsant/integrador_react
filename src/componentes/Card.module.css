@@ -1,6 +1,6 @@
 .conteiner {
     background-color: var(--roxo-escuro);
-    color: #ffff;
+    color: #000000;
     display: flex;
     width:300px;
     padding: 10px;
@@ -9,7 +9,7 @@
     transition: transform .25s;
 }
 
-/* dispara o evente quando o cursor passar em cima do conteiner */
+/* dispara o evento quando o cursor passar em cima do conteiner */
 .conteiner:hover {
     /* definiu o tipo de efeito de escala e o tempo que ocorre que ocorre em 025 segundos apresenta*/
     transform: scale(1.025);

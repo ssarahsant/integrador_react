@@ -2,7 +2,7 @@
     background-color: #fff;
     padding: 20px; /* Adicionando um espaçamento interno */
     border-right: 1px solid var(--cinza-claro); /* Adicionando uma borda à direita */
-    /* background-image: url('C:\Users\ct67ca\Desktop\integrador_react - Copia\src\assets\download (2).jfif');
+    /* background-image: url('C:\Users\Dell\Desktop\integrador_react\src\assets\logo.png');
     background-size: cover;
     background-position: center;*/
 }
@@ -13,13 +13,10 @@
     margin-bottom: 20px; /* Aumentando o espaçamento abaixo do cabeçalho */
 }
 
-.icon {
-    margin-right: 10px; /* Adicionando um espaçamento à direita do ícone */
-}
-
-.title {
-    font-size: 1.7rem; /* Ajustando o tamanho do título */
-    color: var(--roxo-escuro);
+.logo {
+    width: 34vh; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 10px;
 }
 
 .botao {

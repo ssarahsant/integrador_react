@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import estilos from './Sensor.module.css'
+// Importação do Ccomponente Card (para inserir os dados do filme)
+import { Card } from '../componentes/Card'
 
 export function Sensor() {
     // State armazena em uma varuavel em tempo real o que esta ocorrendo
@@ -44,32 +46,14 @@ export function Sensor() {
 
     return (
         <div className={estilos.conteiner}>
-            <h1>Sensores</h1>
-
-            <table>
-                <tr>
-                    <td>ID</td>
-                    <td>Tipo</td>
-                    <td>Localização</td>
-                    <td>Responsável</td>
-                    <td>Longitude</td>
-                    <td>Logintude</td>
-                    <td>Alterar dados</td>
-                </tr>
-
-                {sensores.map(sensor => (
-                    <tr key={sensor.id}>
-                        <td>ID</td>
-                    <td>{sensor.id}</td>
-                    <td>{sensor.tipo}</td>
-                    <td>{sensor.localizacao}</td>
-                    <td>{sensor.responsavel}</td>
-                    <td>{sensor.longitude}</td>
-                    <td>{sensor.latitude}</td>
-                    <td>Alterar</td>
-                    </tr>
-                ))}
-            </table>
+            {sensores.map(sensor => (
+                <Card key={sensor.id} >
+                    <p><strong>Localização:</strong> {sensor.localizacao}</p>
+                    <p><strong>Responsável:</strong> {sensor.responsavel}</p>
+                    <p><strong>Longitude:</strong> {sensor.longitude}</p>
+                    <p><strong>Latitude:</strong> {sensor.latitude}</p>
+                </Card>
+            ))}
         </div>
     )
 

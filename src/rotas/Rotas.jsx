@@ -7,6 +7,7 @@ import { Inicial } from '../paginas/Inicial'
 import { CadastroSensores } from '../paginas/CadastroSensores'
 import { Sensor } from '../paginas/Sensor'
 import { Cadastro } from '../paginas/Cadastro'
+// import { Localizacao } from '../paginas/Localizacao'
 
 //para criar a rota usa-se a barra (/) para separra cada caminho e o servidor
 // utlizando duas props: path (caminho) e element (elemento)
