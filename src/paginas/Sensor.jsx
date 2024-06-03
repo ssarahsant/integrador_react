@@ -48,6 +48,7 @@ export function Sensor() {
         <div className={estilos.conteiner}>
             {sensores.map(sensor => (
                 <Card key={sensor.id} >
+                    <p><strong>Sensor:</strong> {sensor.tipo}</p>
                     <p><strong>Localização:</strong> {sensor.localizacao}</p>
                     <p><strong>Responsável:</strong> {sensor.responsavel}</p>
                     <p><strong>Longitude:</strong> {sensor.longitude}</p>

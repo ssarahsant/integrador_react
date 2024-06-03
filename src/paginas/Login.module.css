@@ -4,24 +4,29 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('C:/Users/Dell/Desktop/integrador_react/src/assets/fundo_login.png'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
- 
+
 .conteiner {
     display: flex;
     justify-content: center;
     align-items: center;
 }
- 
+
 .titulo {
     text-align: center;
     color: #000000;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+}
+
+.mensagem {
+    color: var(--roxo-escuro);
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .formulario {
@@ -31,14 +36,14 @@
     padding: 40px;
     border-radius: 10px;
 }
- 
+
 .campo {
     margin-bottom: 10px;
     padding: 8px;
     border-radius: 6px;
     width: 250px;
 }
- 
+
 .botao {
     background-color: var(--roxo-escuro);
     color: var(--cinza-claro);
@@ -48,4 +53,4 @@
     border: none;
     margin-top: 10px;
 }
- 
+

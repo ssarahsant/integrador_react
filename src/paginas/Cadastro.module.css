@@ -1,4 +1,4 @@
-.conteiner{
+.conteiner {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -7,18 +7,18 @@
     background-color: var(--cinza-escuro);
 }
 
-.formulario{
+.formulario {
     display: flex;
     flex-direction: column;
     background-color: var(--branco);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Definindo a largura do formulário */
-    max-width: 380px; /* Definindo a largura máxima do formulário */
-    margin: 0 auto; /* Centralizando o formulário na página */
+    width: 80%;
+    max-width: 380px;
+    margin: 0 auto;
 }
- 
+
 .titulo {
     color: var(--roxo-escuro);
     font-size: 1.9rem;
@@ -26,30 +26,41 @@
     text-align: center;
 }
 
-.campo{
-    margin-bottom: 15px; /* Aumentando o espaçamento entre os campos */
-    padding: 12px; /* Aumentando o preenchimento dos campos */
+.campo {
+    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid var(--cinza-escuro);
     border-radius: 6px;
     background-color: var(--cinza-claro);
 }
- 
-.botao{
+
+.botao {
     background-color: var(--roxo-escuro);
     color: var(--branco);
     padding: 10px;
     border-radius: 8px;
-    transition: color .5s background-color .5s;
-    margin-top: 10px; 
+    transition: color .5s, background-color .5s;
+    margin-top: 10px;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: var(--roxo-claro);
     color: var(--branco);
 }
 
 .mensagem {
-    color: red;
+    color: var(--roxo-escuro);
     font-weight: 600;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+.link {
+    color: var(--roxo-escuro);
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
 }

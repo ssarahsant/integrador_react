@@ -27,6 +27,12 @@ export function Lateral() {
                     to='cadastro'>
                     Cadastro de Usuário
                 </Link>
+
+                <Link
+                    className={estilos.botao}
+                    to='localizacao'>
+                    Localização
+                </Link>
             </section>
         </aside>
     )

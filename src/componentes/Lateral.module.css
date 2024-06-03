@@ -14,9 +14,10 @@
 }
 
 .logo {
-    width: 34vh; /* Ajuste o tamanho conforme necessário */
+    width: 100%; /* Ajuste o tamanho conforme necessário */
     height: auto;
     margin-right: 10px;
+    background-size: cover;
 }
 
 .botao {

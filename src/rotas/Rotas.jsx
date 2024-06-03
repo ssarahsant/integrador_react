@@ -4,10 +4,10 @@ import { Routes, Route } from 'react-router-dom'
 // utilizando os routes para envpolver as rotas unicamente.
 import { Login } from '../paginas/Login'
 import { Inicial } from '../paginas/Inicial'
-import { CadastroSensores } from '../paginas/CadastroSensores'
 import { Sensor } from '../paginas/Sensor'
 import { Cadastro } from '../paginas/Cadastro'
-// import { Localizacao } from '../paginas/Localizacao'
+import { Localizacao } from '../paginas/Localizacao'
+import { CadastroSensores } from '../paginas/CadastroSensores'
 
 //para criar a rota usa-se a barra (/) para separra cada caminho e o servidor
 // utlizando duas props: path (caminho) e element (elemento)
@@ -20,10 +20,10 @@ export function Rotas() {
             <Route path='/' element={<Login/>}/>
             <Route path='/inicial' element={<Inicial/>}>
                 <Route index element={<Sensor/>}/>
-                <Route path='cadastrosensores' element={<CadastroSensores/>}/>
                 <Route path='cadastro' element={<Cadastro/>}/>
+                <Route path='cadastrosensores' element={<CadastroSensores/>}/>
+                <Route path='localizacao' element={<Localizacao/>}/>
             </Route>
-            
         </Routes>
     )
 }
