@@ -8,6 +8,8 @@ import { Sensor } from '../paginas/Sensor'
 import { Cadastro } from '../paginas/Cadastro'
 import { Localizacao } from '../paginas/Localizacao'
 import { CadastroSensores } from '../paginas/CadastroSensores'
+import { AlterarSensor } from '../paginas/AlterarSensor'
+import { FiltroSensor } from '../paginas/FiltroSensor'
 
 //para criar a rota usa-se a barra (/) para separra cada caminho e o servidor
 // utlizando duas props: path (caminho) e element (elemento)
@@ -23,7 +25,10 @@ export function Rotas() {
                 <Route path='cadastro' element={<Cadastro/>}/>
                 <Route path='cadastrosensores' element={<CadastroSensores/>}/>
                 <Route path='localizacao' element={<Localizacao/>}/>
+                <Route path='alterarsensor/:id' element={<AlterarSensor/>}/> 
+                <Route path='filtrosensores' element={<FiltroSensor/>}/> 
             </Route>
+          
         </Routes>
     )
 }

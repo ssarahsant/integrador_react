@@ -1,5 +1,5 @@
 .conteiner {
-    background-color: var(--roxo-escuro);
+    background-color: var(--azul-escuro);
     color: #ffffff;
     display: flex;
     width:300px;
@@ -19,5 +19,5 @@
     /* definiu o tipo de efeito de escala e o tempo que ocorre que ocorre em 025 segundos apresenta*/
     transform: scale(1.025);
     /* sombra que apresenta juntamente com os efeitos descritos */
-    box-shadow: 0px 0px 10px var(--roxo-claro);
+    box-shadow: 0px 0px 10px var(--azul);
 }

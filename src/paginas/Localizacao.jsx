@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Mapa from '../componentes/Mapa';
+import estilos from './Sensor.module.css'
 
 export function Localizacao() {
     const [pontos, setPontos] = useState([]);
@@ -36,11 +37,11 @@ export function Localizacao() {
     }, []);
 
     if (loading) {
-        return <div>Carregando...</div>;
+        return <div className={estilos.mensagemErro}> Carregando... </div>;
     }
 
     if (error) {
-        return <div>Erro ao carregar os dados: {error.message}</div>;
+        return <div className={estilos.mensagemErro}> Erro ao carregar os dados: {error.message} </div>;
     }
 
     return (

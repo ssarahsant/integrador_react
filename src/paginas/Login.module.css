@@ -24,7 +24,7 @@
 }
 
 .mensagem {
-    color: var(--roxo-escuro);
+    color: var(--azul-escuro);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -45,8 +45,8 @@
 }
 
 .botao {
-    background-color: var(--roxo-escuro);
-    color: var(--cinza-claro);
+    background-color: var(--azul-escuro);
+    color: var(--cinza);
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;

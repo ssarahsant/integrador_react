@@ -52,19 +52,19 @@ export function Cadastro() {
                 />
                 {errors.email && <p className={estilos.mensagem}>{errors.email.message}</p>}
 
-                <label>Username</label>
+                <label>Usuário</label>
                 <input
                     {...register('username')}
                     className={estilos.campo}
-                    placeholder='Username'
+                    placeholder='Usuário'
                 />
                 {errors.username && <p className={estilos.mensagem}>{errors.username.message}</p>}
 
-                <label>Password</label>
+                <label>Senha</label>
                 <input
                     {...register('password')}
                     className={estilos.campo}
-                    placeholder='Password'
+                    placeholder='Senha'
                     type='password'
                 />
                 {errors.password && <p className={estilos.mensagem}>{errors.password.message}</p>}

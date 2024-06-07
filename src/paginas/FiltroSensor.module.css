@@ -1,0 +1,105 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-claro);
+    padding: 50px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Ajusta a largura para 70% */
+    max-width: 500px; /* Define uma largura máxima menor */
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.campo {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 6px;
+    background-color: var(--cinza);
+}
+
+.campoCheckbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.botao {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 8px;
+    transition: color 0.5s, background-color 0.5s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.botao:hover {
+    background-color: var(--branco);
+    font-weight: bold;
+    color: var(--azul);
+}
+
+.mensagem {
+    color: var(--azul-escuro);
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.titulo {
+    color: var(--azul-escuro);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.conteinerTabela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-claro);
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cinza);
+    max-height: 400px; /* Defina uma altura máxima para a tabela */
+    overflow-y: auto; /* Torne a tabela rolável verticalmente caso necessário */
+}
+
+  
+.tabela th, .tabela td {
+    padding: 12px; /* Reduza o preenchimento das células */
+    border: 1px solid var(--cinza-claro);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.tabela th {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+.tabela tbody tr:hover {
+    background-color: var(--cinza-claro);
+    color: var(--azul-escuro);
+}
+  

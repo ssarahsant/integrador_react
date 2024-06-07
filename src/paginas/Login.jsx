@@ -63,6 +63,7 @@ export function Login() {
                     <label>Usuário</label>
                     <input
                         className={estilos.campo}
+                        placeholder="Usuário"
                         {...register('usuario')}
                     />
                     {errors.usuario && (
@@ -72,6 +73,7 @@ export function Login() {
                     <label>Senha</label>
                     <input
                         className={estilos.campo}
+                        placeholder="Senha"
                         {...register('senha')}
                         type="password"
                     />

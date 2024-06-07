@@ -13,7 +13,7 @@ export function Lateral() {
                 <Link
                     className={estilos.botao}
                     to='/inicial'>
-                    Sensores
+                    Lista de Sensores
                 </Link>
 
                 <Link
@@ -31,7 +31,13 @@ export function Lateral() {
                 <Link
                     className={estilos.botao}
                     to='localizacao'>
-                    Localização
+                    Mapa de Sensores
+                </Link>
+
+                <Link
+                    className={estilos.botao}
+                    to='filtrosensores'>
+                    Filtro de Sensores
                 </Link>
             </section>
         </aside>

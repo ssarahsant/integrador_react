@@ -4,29 +4,30 @@ import axios from 'axios';
 import estilos from './Sensor.module.css'
 // Importação do Ccomponente Card (para inserir os dados do filme)
 import { Card } from '../componentes/Card'
+import { Link } from 'react-router-dom';
 
 export function Sensor() {
     // State armazena em uma varuavel em tempo real o que esta ocorrendo
     // apresentando simultaneanete a mudança de status
-    const[sensores, setSensores] = useState([]);
+    const [sensores, setSensores] = useState([]);
 
     // controle de carregamento dos itens e erros
     // o valor incial quando está carregando, é true e quando receber um valor para de carregar e apresenta um resultado
     const [loading, setLoading] = useState(true);
-    
-    const[error, setError]=useState(null);
+
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchSensores() {
             try {
                 const token = localStorage.getItem('access_token')
                 const response = await axios.get('http://127.0.0.1:8000/api/sensores', {
-                    header:{
-                        'Authorization':`Bearer ${token}`
+                    header: {
+                        'Authorization': `Bearer ${token}`
                     }
-            });
-            setSensores(response.data)
-            setLoading(false)
+                });
+                setSensores(response.data)
+                setLoading(false)
             }
             catch (erro) {
                 setError(erro)
@@ -35,13 +36,13 @@ export function Sensor() {
         }
         fetchSensores();
     }, []);
-    
-    if (loading){
-        return <div> Carregando... </div>
+
+    if (loading) {
+        return <div className={estilos.mensagemErro}> Carregando... </div>
     }
 
-    if (error){
-        return <div> Erro ao carregar os dados: {error.message}</div>
+    if (error) {
+        return<div className={estilos.mensagemErro}> Erro ao carregar os dados: {error.message}</div>
     }
 
     return (
@@ -51,8 +52,14 @@ export function Sensor() {
                     <p><strong>Sensor:</strong> {sensor.tipo}</p>
                     <p><strong>Localização:</strong> {sensor.localizacao}</p>
                     <p><strong>Responsável:</strong> {sensor.responsavel}</p>
-                    <p><strong>Longitude:</strong> {sensor.longitude}</p>
                     <p><strong>Latitude:</strong> {sensor.latitude}</p>
+                    <p><strong>Longitude:</strong> {sensor.longitude}</p>
+                    <Link
+                        className={estilos.botao}
+                        to={`alterarsensor/${sensor.id}`}>
+                        Alterar Sensor
+                    </Link>
+
                 </Card>
             ))}
         </div>
@@ -68,5 +75,5 @@ export function Sensor() {
 
 // enquanto estiver carregando, terá um retorno, assim serve para os erros
 
-// a funcionalidade map percorre a lista gerada pelo fetch anteriormente 
+// a funcionalidade map percorre a lista gerada pelo fetch anteriormente
 // o key serve para indicar a qual item está se refereindo da lista de objetos
