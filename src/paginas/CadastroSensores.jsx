@@ -25,6 +25,7 @@ export function CadastroSensores() {
     });
 
     async function obterDadosFormulario(data) {
+        
         console.log(data)
         try {
             console.log(`${localStorage.getItem('access_token')}`)
@@ -43,8 +44,6 @@ export function CadastroSensores() {
 
     return (
         <div className={estilos.container}>
-           
-
             <form className={estilos.formulario} onSubmit={handleSubmit(obterDadosFormulario)}>
             <p className={estilos.titulo}>Cadastro de Sensor</p>
 
@@ -63,11 +62,11 @@ export function CadastroSensores() {
                 {errors.mac_address && <p className={estilos.mensagem}>{errors.mac_address.message}</p>}
 
                 <label>Latitude</label>
-                <input {...register('latitude')} className={estilos.campo} placeholder="Latitude" />
+                <input {...register('latitude')} className={estilos.campo} placeholder="Latitude (insira uma latitude existente)" />
                 {errors.latitude && <p className={estilos.mensagem}>{errors.latitude.message}</p>}
 
                 <label>Longitude</label>
-                <input {...register('longitude')} className={estilos.campo} placeholder="Longitude" />
+                <input {...register('longitude')} className={estilos.campo} placeholder="Longitude (insira uma longitude existente)" />
                 {errors.longitude && <p className={estilos.mensagem}>{errors.longitude.message}</p>}
 
                 <label>Localização</label>

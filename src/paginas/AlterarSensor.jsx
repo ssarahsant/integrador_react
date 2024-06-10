@@ -14,7 +14,6 @@ const schemaAlterarSensor = z.object({
 
     longitude: z.string()
         .refine(val => !isNaN(parseFloat(val)), 'Longitude inválida'),
-        
     localizacao: z.string().max(100, 'Máximo de 100 caracteres'),
     responsavel: z.string().max(100, 'Máximo de 100 caracteres'),
     unidade_medida: z.string().max(20, 'Máximo de 20 caracteres').nullable(),
@@ -110,8 +109,14 @@ export function AlterarSensor() {
                 <input {...register('unidade_medida')} className={estilos.campo} />
                 {errors.unidade_medida && <p className={estilos.mensagem}>{errors.unidade_medida.message}</p>}
 
-                <label>Status Operacional</label>
-                <input {...register('status_operacional')} type="checkbox" />
+                <div className={estilos.campoCheckbox}>
+                    <input
+                        {...register('status_operacional')}
+                        type="checkbox"
+                        className={estilos.checkbox}
+                    />
+                    <label>Status Operacional</label>
+                </div>
                 
                 <label>Observação</label>
                 <textarea {...register('observacao')} className={estilos.campo}></textarea>
